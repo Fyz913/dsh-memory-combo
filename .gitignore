@@ -1,0 +1,14 @@
+# 本地 DSH 数据，不应入库
+.dsh-meow/
+.dsh-memory/
+*.db
+*.db-shm
+*.db-wal
+
+# 备份文件
+*.bak-*
+*.log
+
+# 编辑器
+.vscode/
+.idea/
