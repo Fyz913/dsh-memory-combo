@@ -1,0 +1,32 @@
+# 把下面两条 entry 合并进 $DSH_HOME/profiles/desktop/cordis.patch.yml
+# 注意：这是 YAML 数组的片段（每条以 "- id:" 开头），不是完整文件。
+# 合并前请先备份原文件。
+
+- id: meow-memory
+  name: meow-memory
+  config:
+    enabled: true
+    promptLang: zh
+    hitTopK: 2
+    dream:
+      enabled: true
+      idleMinutes: 180
+
+- id: furongjun1999-dsh-memory
+  name: "@furongjun1999/dsh-memory"
+  config:
+    serverName: lingshu
+    identity: 灵枢
+    tools: core
+    memory:
+      userMessage: false
+      assistantMessage: false
+      toolResult: false
+    mutual:
+      enabled: false
+    mdcg:
+      enabled: true
+      actor: dsh-memory
+      tenant: default
+      clearance: private
+    failOnStartupError: false
